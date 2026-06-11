@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BEV Web Sim — 4-Camera Bird's-Eye View</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <h1>BEV Web Sim</h1>
+  <span id="status">connecting…</span>
+</header>
+
+<main>
+  <section id="views">
+    <div class="cams">
+      <figure><img id="img-front" src="/stream/front" alt="front"><figcaption>Front</figcaption></figure>
+      <figure><img id="img-rear" src="/stream/rear" alt="rear"><figcaption>Rear</figcaption></figure>
+      <figure><img id="img-left" src="/stream/left" alt="left"><figcaption>Left</figcaption></figure>
+      <figure><img id="img-right" src="/stream/right" alt="right"><figcaption>Right</figcaption></figure>
+    </div>
+    <figure class="bev">
+      <img id="img-bev" src="/stream/bev" alt="bird's-eye view">
+      <figcaption>Bird's-Eye View <span id="bev-readout"></span></figcaption>
+    </figure>
+  </section>
+
+  <aside id="controls">
+    <h2>Camera <select id="cam-select"></select></h2>
+    <div id="cam-sliders"></div>
+
+    <h2>BEV canvas</h2>
+    <div id="bev-controls"></div>
+    <label class="row">blend
+      <select id="blend-select"><option>soft</option><option>hard</option></select>
+    </label>
+
+    <h2>Debug overlays</h2>
+    <div id="overlay-checks"></div>
+
+    <h2>Obstacles</h2>
+    <div id="obstacle-list"></div>
+    <button id="add-obstacle">+ add box</button>
+
+    <h2>Persistence</h2>
+    <button id="save-btn">Save configs to YAML</button>
+    <span id="save-msg"></span>
+  </aside>
+</main>
+
+<script src="/static/main.js"></script>
+</body>
+</html>

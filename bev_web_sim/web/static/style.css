@@ -1,0 +1,50 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: #14161a; color: #d8dce2;
+  font-family: system-ui, sans-serif; font-size: 14px;
+}
+header {
+  display: flex; align-items: baseline; gap: 16px;
+  padding: 8px 16px; background: #1d2127; border-bottom: 1px solid #2c313a;
+}
+header h1 { font-size: 18px; margin: 0; }
+#status { color: #7fd180; font-variant-numeric: tabular-nums; }
+
+main { display: flex; gap: 12px; padding: 12px; align-items: flex-start; }
+#views { flex: 1; min-width: 0; }
+
+.cams { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+figure { margin: 0; background: #1d2127; border: 1px solid #2c313a; border-radius: 6px; padding: 4px; }
+figure img { width: 100%; display: block; border-radius: 4px; background: #000; }
+figcaption { padding: 4px 6px; color: #9aa3af; font-size: 12px; }
+
+.bev { margin-top: 8px; }
+.bev img { max-height: 70vh; width: auto; max-width: 100%; margin: 0 auto; cursor: crosshair; }
+#bev-readout { color: #e8c66a; margin-left: 12px; font-variant-numeric: tabular-nums; }
+
+#controls {
+  width: 320px; flex-shrink: 0; background: #1d2127;
+  border: 1px solid #2c313a; border-radius: 6px; padding: 12px;
+  max-height: calc(100vh - 80px); overflow-y: auto;
+}
+#controls h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em;
+  color: #9aa3af; margin: 16px 0 8px; }
+#controls h2:first-child { margin-top: 0; }
+
+.row { display: flex; align-items: center; gap: 8px; margin: 6px 0; }
+.row label, label.row { color: #b6bec9; }
+.row .name { width: 72px; flex-shrink: 0; }
+.row input[type=range] { flex: 1; }
+.row .val { width: 56px; text-align: right; font-variant-numeric: tabular-nums; color: #e8c66a; }
+
+select, button, input[type=number] {
+  background: #262b33; color: #d8dce2; border: 1px solid #3a4150;
+  border-radius: 4px; padding: 4px 8px;
+}
+button { cursor: pointer; }
+button:hover { background: #303744; }
+#save-msg { color: #7fd180; margin-left: 8px; font-size: 12px; }
+
+.obstacle { border: 1px solid #2c313a; border-radius: 4px; padding: 6px; margin: 6px 0; }
+.obstacle .row input { width: 56px; }
+.obstacle .remove { float: right; color: #d17f7f; }

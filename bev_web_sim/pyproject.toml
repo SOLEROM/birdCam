@@ -1,0 +1,22 @@
+[project]
+name = "bev_web_sim"
+version = "0.1.0"
+description = "Web-based 4-camera bird's-eye-view simulation demo"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+markers = [
+    "webots: requires a running Webots installation (auto-skipped when absent)",
+    "e2e: browser end-to-end tests (Playwright)",
+    "perf: performance benchmarks",
+]
+
+[tool.coverage.run]
+source = ["bev", "web", "frame_sources", "configs_schema"]
+omit = ["frame_sources/webots_source.py", "web/__main__.py"]
+
+[tool.coverage.report]
+fail_under = 80
+show_missing = true

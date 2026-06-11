@@ -1,0 +1,11 @@
+checker_size: 0.5
+grid_step: 1.0
+animate: true
+markers:
+  # the metric-acceptance 1m white square, corners (2,-0.5)..(3,0.5)
+  - {x: 2.5, y: 0.0, size: 1.0, color: [255, 255, 255]}
+obstacles:
+  # tall box demonstrating the flat-IPM smearing limitation (plan0 section 7)
+  - {type: box, x: 4.0, y: 2.0, size_x: 0.4, size_y: 0.4, size_z: 1.2, color: [40, 90, 200]}
+  # low curb-like object
+  - {type: curb, x: 3.0, y: -2.5, size_x: 1.5, size_y: 0.2, size_z: 0.12, color: [120, 120, 120]}

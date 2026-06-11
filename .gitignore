@@ -1,0 +1,29 @@
+# --- reference clones (244 MB, re-fetched on demand; URLs are in plan0.md) ---
+refGits/
+
+# --- python ---
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# --- generated / regenerable (scripts/gen_webots.py) ---
+bev_web_sim/webots/worlds/textures/
+bev_web_sim/webots/worlds/.*.wbproj
+
+# --- runtime artifacts & logs ---
+artifacts/
+*.log
+nohup.out
+
+# --- editors / OS noise ---
+.vscode/
+.idea/
+.obsidian/
+.DS_Store
+*~
